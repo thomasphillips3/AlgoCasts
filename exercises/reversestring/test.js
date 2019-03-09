@@ -1,5 +1,4 @@
-const reverse_1 = require('./index');
-const reverse_2 = require('./index');
+import { reverse_1, reverse_2 } from './index';
 
 describe('Reverse a string - solution 1', function() {
   it('Reverse function exists', () => {
