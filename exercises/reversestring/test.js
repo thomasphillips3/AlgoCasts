@@ -1,13 +1,15 @@
-const reverse = require('./index');
+const reverse_1 = require('./index');
 
-test('Reverse function exists', () => {
-  expect(reverse).toBeDefined();
-});
+describe('Reverse a string - solution 1', function() {
+  it('Reverse function exists', () => {
+    expect(reverse_1).toBeDefined();
+  });
 
-test('Reverse reverses a string', () => {
-  expect(reverse('abcd')).toEqual('dcba');
-});
+  it('Reverse reverses a string', () => {
+    expect(reverse_1('abcd')).toEqual('dcba');
+  });
 
-test('Reverse reverses a string', () => {
-  expect(reverse('  abcd')).toEqual('dcba  ');
-});
+  it('Reverse reverses a string', () => {
+    expect(reverse_1('  abcd')).toEqual('dcba  ');
+  });
+})
