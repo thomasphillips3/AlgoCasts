@@ -1,6 +1,6 @@
 # AlgoCasts
 
-Companion repo to a course on Udemy.com
+Companion repo to [The Coding Interview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/share/10023qA0Abc1pVR3g=/) on Udemy.com
 
 ## ReverseString
 * [Solution](reversestring/index.js)  
@@ -35,7 +35,8 @@ function reverse(str) {
 #### Algorithm
 * Create an empty string
 * Traverse the input string one character at a time
-* Add the current character to the new string
+* Prepend the current character to the beginning of the new string
+* Return the completed reversed string
 
 #### Code
 ```
@@ -47,4 +48,32 @@ function reverse_2(str) {
   return reversed;
 }
 ```
+---
+### Solution 3
+#### Algorithm
+Use the Javascript's [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) method. 
 
+* Convert string to an array of characters
+* Iterate through each character in the array with `reduce()`
+* Prepend the current character to the beginning of the new string
+* Return the completed reversed string
+
+#### Code
+```
+str.split('').reduce((reversed, character) => {
+  return (character + reversed);
+}, '')
+```
+
+### Thoughts
+* I took this as an opportunity to dig deeper into Jest as well as learning the algorithms. 
+* Instead of commenting out other solutions, I'm leaving them all in the code, and writing tests for them all. This is giving me experience writing unit tests with Jest.
+* Upgraded to ES6 and learned about Babel. I had always heard of Babel, but never knew what it was. Now I know that Babel is used to allow older
+
+### Resources
+* [Creating test suites, specs and expectations in Jest](https://hub.packtpub.com/creating-test-suites-specs-and-expectations-jest/)
+* [[es6] import, export, default cheatsheet]()
+* [Testing JavaScript with Jest](https://flaviocopes.com/jest)
+* [@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env/)
+* [facebook/jest](https://github.com/facebook/jest)
+* [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
