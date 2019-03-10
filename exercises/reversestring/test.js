@@ -36,4 +36,8 @@ describe('Reverse a string - solution 3', function() {
     expect(reverse_3('abcd')).toEqual('dcba');
 
   });
+
+  it('reverse_3 reverses a string with spaces', () => {
+    expect(reverse_3('  abcd')).toEqual('dcba  ');
+  });
 });
