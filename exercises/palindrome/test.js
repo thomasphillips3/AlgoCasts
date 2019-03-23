@@ -1,4 +1,5 @@
 import { palindrome_1, palindrome_2 } from './index';
+
 describe('Palindrome - Solution 1', () => {
   it('palindrome_1 function is defined', () => {
     expect(typeof palindrome_1).toEqual('function');
